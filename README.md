@@ -1,8 +1,7 @@
-# Transfer Money
+# Big Number
 
-A sample of DDD and DCI.
+A sample of TDD.
 
-Please refer to the information: https://myslide.cn/slides/21391
 
 
 
