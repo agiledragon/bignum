@@ -30,3 +30,20 @@ TEST(formatStr, first_second)
     ASSERT_EQ("first111", first);
     ASSERT_EQ("00second", second);
 }
+
+TEST(addStr, first_second)
+{
+    std::string first = "1";
+    std::string second = "999";
+    ASSERT_EQ("1000", addStr(first, second));
+
+    first = "123456789";
+    second = "987654321";
+    ASSERT_EQ("1111111110", addStr(first, second));
+
+    first = "7777777";
+    second = "333";
+    ASSERT_EQ("7778110", addStr(first, second));
+
+}
+
