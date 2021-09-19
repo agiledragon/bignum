@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-char charAdd(char first, char second, int& inc);
+char addChar(char first, char second, int& inc);
 void formatStr(std::string& first, std::string& second);
 
 

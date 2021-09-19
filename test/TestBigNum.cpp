@@ -1,12 +1,12 @@
 #include "gtest/gtest.h"
 #include "BigNum.h"
 
-TEST(charAdd, first_second_inc)
+TEST(addChar, first_second_inc)
 {
     int inc = 0;
-    ASSERT_EQ('8', charAdd('1', '7', inc));
+    ASSERT_EQ('8', addChar('1', '7', inc));
     ASSERT_EQ(0, inc);
-    ASSERT_EQ('2', charAdd('5', '7', inc));
+    ASSERT_EQ('2', addChar('5', '7', inc));
     ASSERT_EQ(1, inc);
 }
 
