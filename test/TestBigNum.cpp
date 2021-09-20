@@ -12,23 +12,23 @@ TEST(addChar, first_second_inc)
 
 TEST(formatStr, first_second)
 {
-    std::string first = "first";
-    std::string second = "second";
+    std::string first = "12345";
+    std::string second = "123456";
     formatStr(first, second);
-    ASSERT_EQ("0first", first);
-    ASSERT_EQ("second", second);
+    ASSERT_EQ("012345", first);
+    ASSERT_EQ("123456", second);
 
-    first = "first";
-    second = "econd";
+    first = "12345";
+    second = "67890";
     formatStr(first, second);
-    ASSERT_EQ("first", first);
-    ASSERT_EQ("econd", second);
+    ASSERT_EQ("12345", first);
+    ASSERT_EQ("67890", second);
 
-    first = "first111";
-    second = "second";
+    first = "12345111";
+    second = "123456";
     formatStr(first, second);
-    ASSERT_EQ("first111", first);
-    ASSERT_EQ("00second", second);
+    ASSERT_EQ("12345111", first);
+    ASSERT_EQ("00123456", second);
 }
 
 TEST(addStr, first_second)
@@ -44,6 +44,5 @@ TEST(addStr, first_second)
     first = "7777777";
     second = "333";
     ASSERT_EQ("7778110", addStr(first, second));
-
 }
 
