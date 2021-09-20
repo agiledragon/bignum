@@ -67,3 +67,9 @@ TEST(multChar, first_second_inc)
     ASSERT_EQ(0, inc);
 }
 
+TEST(multStrAndChar, first_second)
+{
+    ASSERT_EQ("999999", multStrAndChar("111111", '9'));
+    ASSERT_EQ("1111110", multStrAndChar("555555", '2'));
+    ASSERT_EQ("864192", multStrAndChar("123456", '7'));
+}

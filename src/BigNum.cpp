@@ -48,3 +48,20 @@ char multChar(char first, char second, int& inc)
     inc = mult / 10;
     return mult % 10 + '0';
 }
+
+std::string multStrAndChar(std::string first, char second)
+{
+    std::string s;
+    int inc = 0;
+    for (int i = first.length() - 1; i >= 0; i--)
+    {
+        char c = multChar(first[i], second, inc);
+        s.insert(s.begin(), c);
+    }
+
+    if (inc != 0)
+    {
+        s.insert(s.begin(), inc + '0');
+    }
+    return s;
+}
