@@ -66,7 +66,16 @@ std::string multStrAndChar(std::string first, char second)
     return s;
 }
 
-std::string toStr(unsigned long long num)
+std::string multBigNum(std::string first, std::string second)
 {
-    return std::to_string(num);
+    std::string result = "0";
+
+    for (int i = second.length() - 1; i >= 0; i--)
+    {
+        std::string s = multStrAndChar(first, second[i]);
+        s = s.insert(s.length() - 1, second.length() - 1 - i, '0');
+        result = addStr(result, s);
+    }
+    return result;
 }
+
