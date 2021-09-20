@@ -73,3 +73,8 @@ TEST(multStrAndChar, first_second)
     ASSERT_EQ("1111110", multStrAndChar("555555", '2'));
     ASSERT_EQ("864192", multStrAndChar("123456", '7'));
 }
+
+TEST(toStr, intNum)
+{
+    ASSERT_EQ("1234567", toStr(1234567));
+}

@@ -65,3 +65,8 @@ std::string multStrAndChar(std::string first, char second)
     }
     return s;
 }
+
+std::string toStr(int num)
+{
+    return std::to_string(num);
+}
