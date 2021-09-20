@@ -6,7 +6,13 @@ TEST(addChar, first_second_inc)
     int inc = 0;
     ASSERT_EQ('8', addChar('1', '7', inc));
     ASSERT_EQ(0, inc);
+
+    inc = 0;
     ASSERT_EQ('2', addChar('5', '7', inc));
+    ASSERT_EQ(1, inc);
+
+    inc = 2;
+    ASSERT_EQ('4', addChar('5', '7', inc));
     ASSERT_EQ(1, inc);
 }
 
