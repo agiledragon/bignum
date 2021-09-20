@@ -24,15 +24,17 @@ void formatStr(std::string& first, std::string& second)
 }
 
 
-std::string addStr(std::string first, std::string second)
+std::string addStr(const std::string& first, const std::string& second)
 {
-    formatStr(first, second);
+    std::string firstTemp = first;
+    std::string secondTemp = second;
+    formatStr(firstTemp, secondTemp);
 
     int inc = 0;
     std::string s;
-    for (int i = first.length() - 1; i >= 0; i--)
+    for (int i = firstTemp.length() - 1; i >= 0; i--)
     {
-        char c = addChar(first[i], second[i], inc);
+        char c = addChar(firstTemp[i], secondTemp[i], inc);
         s.insert(s.begin(), c);
     }
 
@@ -50,7 +52,7 @@ char multChar(char first, char second, int& inc)
     return mult % 10 + '0';
 }
 
-std::string multStrAndChar(std::string first, char second)
+std::string multStrAndChar(const std::string& first, char second)
 {
     std::string s;
     int inc = 0;

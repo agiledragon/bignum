@@ -2,7 +2,7 @@
 #include "StrUtil.h"
 
 
-std::string multBigNum(std::string first, std::string second)
+std::string multBigNum(const std::string& first, const std::string& second)
 {
     std::string result = "0";
 

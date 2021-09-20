@@ -5,8 +5,8 @@
 
 char addChar(char first, char second, int& inc);
 void formatStr(std::string& first, std::string& second);
-std::string addStr(std::string first, std::string second);
+std::string addStr(const std::string& first, const std::string& second);
 char multChar(char first, char second, int& inc);
-std::string multStrAndChar(std::string first, char second);
+std::string multStrAndChar(const std::string& first, char second);
 
 #endif
