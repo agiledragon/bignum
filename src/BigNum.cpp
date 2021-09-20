@@ -41,3 +41,10 @@ std::string addStr(std::string first, std::string second)
     }
     return s;
 }
+
+char multChar(char first, char second, int& inc)
+{
+    int mult = (first - '0') * (second - '0') + inc;
+    inc = mult / 10;
+    return mult % 10 + '0';
+}

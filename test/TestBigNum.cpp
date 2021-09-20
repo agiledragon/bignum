@@ -46,3 +46,18 @@ TEST(addStr, first_second)
     ASSERT_EQ("7778110", addStr(first, second));
 }
 
+TEST(multChar, first_second_inc)
+{
+    int inc = 0;
+    ASSERT_EQ('1', multChar('9', '9', inc));
+    ASSERT_EQ(8, inc);
+
+    inc = 2;
+    ASSERT_EQ('3', multChar('9', '9', inc));
+    ASSERT_EQ(8, inc);
+
+    inc = 0;
+    ASSERT_EQ('6', multChar('3', '2', inc));
+    ASSERT_EQ(0, inc);
+}
+
