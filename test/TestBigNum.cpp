@@ -2,7 +2,7 @@
 #include "BigNum.h"
 
 
-TEST(multBigNum, num)
+TEST(multBigNum, first_second)
 {
     std::string first = "1234567891011121314151617181920";
     std::string second = "2019181716151413121110987654321";
