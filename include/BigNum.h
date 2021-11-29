@@ -3,6 +3,8 @@
 
 #include <string>
 
+const std::string INVALID_NUM = "invalid num";
+
 std::string multBigNum(const std::string& first, const std::string& second);
 
 #endif
