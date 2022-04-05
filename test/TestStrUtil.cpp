@@ -2,75 +2,74 @@
 #include "StrUtil.h"
 
 
-TEST(addChar, first_second_inc)
+TEST(addChar, inc0)
 {
     int inc = 0;
-    ASSERT_EQ('8', addChar('1', '7', inc));
-    ASSERT_EQ(0, inc);
-
-    inc = 0;
     ASSERT_EQ('2', addChar('5', '7', inc));
-    ASSERT_EQ(1, inc);
-
-    inc = 2;
-    ASSERT_EQ('4', addChar('5', '7', inc));
     ASSERT_EQ(1, inc);
 }
 
-TEST(formatStr, first_second)
+TEST(addChar, inc1)
+{
+    int inc = 1;
+    ASSERT_EQ('3', addChar('5', '7', inc));
+    ASSERT_EQ(1, inc);
+}
+
+TEST(formatStr, both_ok)
 {
     std::string first = "12345";
-    std::string second = "123456";
-    formatStr(first, second);
-    ASSERT_EQ("012345", first);
-    ASSERT_EQ("123456", second);
-
-    first = "12345";
-    second = "67890";
+    std::string second = "67890";
     formatStr(first, second);
     ASSERT_EQ("12345", first);
     ASSERT_EQ("67890", second);
-
-    first = "12345111";
-    second = "123456";
-    formatStr(first, second);
-    ASSERT_EQ("12345111", first);
-    ASSERT_EQ("00123456", second);
 }
 
-TEST(addStr, first_second)
+TEST(formatStr, first_ok)
 {
-    std::string first = "1";
-    std::string second = "999";
-    ASSERT_EQ("1000", addStr(first, second));
+    std::string first = "12345";
+    std::string second = "6789";
+    formatStr(first, second);
+    ASSERT_EQ("12345", first);
+    ASSERT_EQ("06789", second);
+}
 
-    first = "123456789";
-    second = "987654321";
-    ASSERT_EQ("1111111110", addStr(first, second));
+TEST(formatStr, second_ok)
+{
+    std::string first = "1234";
+    std::string second = "67890";
+    formatStr(first, second);
+    ASSERT_EQ("01234", first);
+    ASSERT_EQ("67890", second);
+}
 
-    first = "7777777";
-    second = "333";
-    ASSERT_EQ("7778110", addStr(first, second));
+TEST(addStr, inc0)
+{
+    std::string first = "123456789";
+    std::string second = "234";
+    ASSERT_EQ("123457023", addStr(first, second));
+}
+
+TEST(addStr, inc1)
+{
+    std::string first = "999999999";
+    std::string second = "1";
+    ASSERT_EQ("1000000000", addStr(first, second));
 }
 
 TEST(multChar, first_second_inc)
 {
-    int inc = 0;
-    ASSERT_EQ('1', multChar('9', '9', inc));
-    ASSERT_EQ(8, inc);
-
-    inc = 2;
-    ASSERT_EQ('3', multChar('9', '9', inc));
-    ASSERT_EQ(8, inc);
-
-    inc = 0;
-    ASSERT_EQ('6', multChar('3', '2', inc));
-    ASSERT_EQ(0, inc);
+    int inc = 4;
+    ASSERT_EQ('2', multChar('6', '8', inc));
+    ASSERT_EQ(5, inc);
 }
 
-TEST(multStrAndChar, first_second)
+TEST(multStrAndChar, inc0)
 {
     ASSERT_EQ("999999", multStrAndChar("111111", '9'));
-    ASSERT_EQ("1111110", multStrAndChar("555555", '2'));
-    ASSERT_EQ("864192", multStrAndChar("123456", '7'));
+}
+
+TEST(multStrAndChar, inc1)
+{
+    ASSERT_EQ("4999999995", multStrAndChar("555555555", '9'));
 }
