@@ -1,7 +1,6 @@
 #include "gtest/gtest.h"
 #include "StrUtil.h"
 
-
 TEST(addChar, inc0)
 {
     int inc = 0;

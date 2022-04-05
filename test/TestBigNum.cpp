@@ -8,7 +8,6 @@ TEST(multBigNum, invalid_bignum)
     ASSERT_EQ(INVALID_NUM, multBigNum(first, second));
 }
 
-
 TEST(multBigNum, valid_bignum)
 {
     std::string first = "1234567891011121314151617181920";
